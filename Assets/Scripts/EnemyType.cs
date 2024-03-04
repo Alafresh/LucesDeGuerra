@@ -7,6 +7,6 @@ namespace ShootEmUp
     {
         public GameObject enemyPrefab;
         public GameObject weaponPrefab;
-        public float speed;
+        public float speed = 2f;
     }
 }
