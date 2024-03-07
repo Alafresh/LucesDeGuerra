@@ -9,7 +9,10 @@ namespace ShootEmUp
         // Set the player input component to c# events
         private PlayerInput _playerInput;
         InputAction moveAction;
+        InputAction fireAction;
         public Vector2 Move => moveAction.ReadValue<Vector2>();
+
+        public bool Fire { get; set; }
 
         public void Start ()
         {
