@@ -2,6 +2,7 @@
 
 namespace ShootEmUp
 {
+    [CreateAssetMenu(menuName = "Create SingleShot", fileName = "SingleShot", order = 0)]
     public class SingleShot : WeaponStrategy
     {
         public override void Fire(Transform firePoint, LayerMask layer)
