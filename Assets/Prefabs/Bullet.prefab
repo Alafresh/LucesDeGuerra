@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 444251463233931847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.361076, y: 54.982315, z: -0.70680344}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  muzzlePrefab: {fileID: 1752905781611240, guid: a150ddd267ffc1b428ae91d94b828b02, type: 3}
-  hitPrefab: {fileID: 1735349400919506, guid: a17580581e360e74db460cc3d5dc0396, type: 3}
+  muzzlePrefab: {fileID: 1261555563981962, guid: ca5824498d345274c9b259632f7755f0, type: 3}
+  hitPrefab: {fileID: 1438542530079480, guid: 21710859533a00746ad2bdd323061a2d, type: 3}
 --- !u!61 &5131003676393088677
 BoxCollider2D:
   m_ObjectHideFlags: 0
