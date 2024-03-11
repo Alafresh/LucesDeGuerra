@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 7637673256520277404}
   - component: {fileID: -8111621274749019251}
   - component: {fileID: 4646839533060879458}
+  - component: {fileID: 6765011953243611087}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -224,6 +225,7 @@ Transform:
   m_Children:
   - {fileID: 8107348933338637630}
   - {fileID: 2610877604795131668}
+  - {fileID: 3338731365010180973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7637673256520277404
@@ -311,3 +313,49 @@ CircleCollider2D:
   m_Offset: {x: -0.037792325, y: 0}
   serializedVersion: 2
   m_Radius: 0.28647316
+--- !u!114 &6765011953243611087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303572788590242456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf8f0b725ac4ae4cb19b9313d3f335e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponStrategy: {fileID: 11400000, guid: a0ede92db3ce63d4bac5d03b46347041, type: 2}
+  firePoint: {fileID: 3338731365010180973}
+  layer: 7
+--- !u!1 &7652519772008428044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3338731365010180973}
+  m_Layer: 7
+  m_Name: firePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3338731365010180973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7652519772008428044}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.235, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6248739596443145525}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
