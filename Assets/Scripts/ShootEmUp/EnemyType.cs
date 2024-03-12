@@ -2,7 +2,7 @@
 
 namespace ShootEmUp
 {
-    [CreateAssetMenu(fileName ="EnemyType", menuName ="Shmup/EnemyType", order = 0)]
+    [CreateAssetMenu(fileName ="EnemyType", menuName ="Shmup/EnemyType")]
     public class EnemyType : ScriptableObject 
     {
         public GameObject enemyPrefab;

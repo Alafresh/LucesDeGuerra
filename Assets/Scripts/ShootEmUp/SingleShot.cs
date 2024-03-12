@@ -2,7 +2,7 @@
 
 namespace ShootEmUp
 {
-    [CreateAssetMenu(menuName = "Create SingleShot", fileName = "SingleShot", order = 0)]
+    [CreateAssetMenu(fileName = "SingleShot", menuName = "Shump/WeaponStrategy/SingleShot")]
     public class SingleShot : WeaponStrategy
     {
         public override void Fire(Transform firePoint, LayerMask layer)

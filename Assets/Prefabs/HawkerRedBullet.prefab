@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5396176947277327102}
   - component: {fileID: 5131003676393088677}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: HawkerRedBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  muzzlePrefab: {fileID: 1261555563981962, guid: ca5824498d345274c9b259632f7755f0, type: 3}
-  hitPrefab: {fileID: 1438542530079480, guid: 21710859533a00746ad2bdd323061a2d, type: 3}
+  muzzlePrefab: {fileID: 1878987882032996, guid: 2f30ce685381cf141a1c05b1ee359db2, type: 3}
+  hitPrefab: {fileID: 1153730961705006, guid: f1aeeba2f9003904da5c0a24ba150198, type: 3}
 --- !u!61 &5131003676393088677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444251463233931847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -91,5 +91,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.35}
+  m_Size: {x: 0.1, y: 0.35}
   m_EdgeRadius: 0

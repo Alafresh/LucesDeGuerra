@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace ShootEmUp
 {
@@ -21,7 +22,6 @@ namespace ShootEmUp
                 var muzzleVFX = Instantiate(muzzlePrefab, transform.position, Quaternion.identity);
                 muzzleVFX.transform.forward = gameObject.transform.forward;
                 muzzleVFX.transform.SetParent(parent);
-
                 DestroyParticleSystem(muzzleVFX);
             }
         }

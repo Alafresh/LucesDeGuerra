@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5396176947277327102}
   - component: {fileID: 5131003676393088677}
   m_Layer: 0
-  m_Name: Shot
+  m_Name: ShootPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  muzzlePrefab: {fileID: 1032096471364102, guid: cee711f63aee1b74bbf4aa13af0f9d64, type: 3}
-  hitPrefab: {fileID: 1065618375357958, guid: 6f8068e2c99ffb04b932ec74e5773db5, type: 3}
+  muzzlePrefab: {fileID: 1294834399362254, guid: 707975e0a3ef9fc469a8b7293a8be358, type: 3}
+  hitPrefab: {fileID: 1220213892471706, guid: 800cddb992d3f5e4eb2348b90447f4a7, type: 3}
 --- !u!61 &5131003676393088677
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444251463233931847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -91,5 +91,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.35}
+  m_Size: {x: 0.05, y: 0.35}
   m_EdgeRadius: 0
