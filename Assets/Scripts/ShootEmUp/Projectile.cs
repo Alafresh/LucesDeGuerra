@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace ShootEmUp
 {
+
     public class Projectile : MonoBehaviour
     {
         [SerializeField] float speed;
