@@ -1,4 +1,4 @@
-namespace ShootEmUp
+namespace Utilities
 {
     public static class Helpers
     {

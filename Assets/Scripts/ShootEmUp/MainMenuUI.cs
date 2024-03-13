@@ -13,7 +13,7 @@ namespace ShootEmUp
         private void Awake()
         {
             playBtn.onClick.AddListener(() => Loader.Load(startingLevel));
-            quitBtn.onClick.AddListener(() => Helpers.QuitGame());
+            quitBtn.onClick.AddListener(() => Utilities.Helpers.QuitGame());
             Time.timeScale = 1f;
         }
     }
