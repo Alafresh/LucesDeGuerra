@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ShootEmUp;
 using UnityEngine;
+using Plane = ShootEmUp.Plane;
 
 public class HS_ProjectileMover2D : MonoBehaviour
 {
@@ -59,9 +61,15 @@ public class HS_ProjectileMover2D : MonoBehaviour
             Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
             Vector3 pos = contact.point + contact.normal * hitOffset;
 
+            var plane = collision.gameObject.GetComponent<Plane>();
+            if (plane != null)
+            {
+                plane.TakenDamage(10);
+            }
             //Spawn hit effect on collision
             if (hit != null)
             {
+                
                 var hitInstance = Instantiate(hit, pos, rot);
                 if (UseFirePointRotation) { hitInstance.transform.rotation = gameObject.transform.rotation * Quaternion.Euler(0, 180f, 0); }
                 else if (rotationOffset != Vector3.zero) { hitInstance.transform.rotation = Quaternion.Euler(rotationOffset); }

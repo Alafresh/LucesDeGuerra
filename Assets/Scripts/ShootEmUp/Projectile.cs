@@ -32,7 +32,8 @@ namespace ShootEmUp
             transform.SetParent(null);
             transform.position += transform.forward * (speed * Time.deltaTime);
         }
-
+        
+        
         private void OnCollisionEnter(Collision collision)
         {
             if (hitPrefab != null)

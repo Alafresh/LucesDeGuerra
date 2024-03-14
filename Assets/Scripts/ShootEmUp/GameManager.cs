@@ -1,26 +1,42 @@
-﻿using UnityEngine;
+﻿using System;
+using Eflatun.SceneReference;
+using UnityEngine;
 
 namespace ShootEmUp
 {
     public class GameManager : MonoBehaviour {
         public static GameManager Instance { get; private set; }
-        [SerializeField] private Player player;
+        public Player Player => _player;
+        [SerializeField] private Player _player;
+        [SerializeField] private GameObject gameOverUI;
+        [SerializeField] private SceneReference mainMenuScene;
         int score;
+        private float restartTimer = 3f;
 
-        public bool IsGameOver() => player.GetHelthNormalized() <= 0 || player.GetFuelNormalized() <= 0;
+        public bool IsGameOver() => _player.GetHelthNormalized() <= 0 || _player.GetFuelNormalized() <= 0;
 
         private void Awake()
         {
-            if (Instance == null)
+            Instance = this;
+            
+            //_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        }
+
+        private void Update()
+        {
+            if (IsGameOver())
             {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
+                restartTimer -= Time.deltaTime;
+                if (gameOverUI.activeSelf == false)
+                {
+                    gameOverUI.SetActive(true);
+                }
+
+                if (restartTimer <= 0)
+                {
+                    Loader.Load(mainMenuScene);
+                }
             }
-            else
-            {
-                Destroy(gameObject);
-            }
-            //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         }
 
         public void AddScore(int amount) => score += amount;

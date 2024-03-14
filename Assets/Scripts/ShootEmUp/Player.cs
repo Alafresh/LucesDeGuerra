@@ -7,16 +7,23 @@ namespace ShootEmUp
         [SerializeField] float fuelConsumptionRate;
 
         float fuel;
-        public float GetFuelNormalized() => 1 - (fuel / maxFuel);
+
+        void Start()
+        {
+            fuel = maxFuel;
+        } 
+        
+        public float GetFuelNormalized() =>  (fuel / maxFuel);
 
         private void Update()
         {
             fuel -= fuelConsumptionRate * Time.deltaTime;
+            Debug.Log("Vida" +  health);
         }
 
         protected override void Die()
         {
-            
+            Debug.Log("Me mori" +  health);
 
         }
     }

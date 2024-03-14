@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ec0021af119d048a9ca18bdf0e6065, type: 3}
   m_Name: BulletSingleShot
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 2
   fireRate: 0.5
   projectileSpeed: 10
   projectileLifeTime: 4
