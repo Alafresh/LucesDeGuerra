@@ -10,6 +10,7 @@ namespace ShootEmUp
         [SerializeField] private Player _player;
         [SerializeField] private GameObject gameOverUI;
         [SerializeField] private SceneReference mainMenuScene;
+        [SerializeField] private GameObject winUI;
         int score;
         private float restartTimer = 3f;
 
@@ -32,6 +33,18 @@ namespace ShootEmUp
                     gameOverUI.SetActive(true);
                 }
 
+                if (restartTimer <= 0)
+                {
+                    Loader.Load(mainMenuScene);
+                }
+            }
+            if (score >= 100)
+            {
+                restartTimer -= Time.deltaTime;
+                if (winUI.activeSelf == false)
+                {
+                    winUI.SetActive(true);
+                }
                 if (restartTimer <= 0)
                 {
                     Loader.Load(mainMenuScene);
