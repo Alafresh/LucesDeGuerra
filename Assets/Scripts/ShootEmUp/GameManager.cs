@@ -1,5 +1,5 @@
 ﻿using System;
-using Eflatun.SceneReference;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace ShootEmUp
@@ -9,7 +9,7 @@ namespace ShootEmUp
         public Player Player => _player;
         [SerializeField] private Player _player;
         [SerializeField] private GameObject gameOverUI;
-        [SerializeField] private SceneReference mainMenuScene;
+        [SerializeField] private string mainMenuScene;
         [SerializeField] private GameObject winUI;
         int score;
         private float restartTimer = 3f;
@@ -35,7 +35,7 @@ namespace ShootEmUp
 
                 if (restartTimer <= 0)
                 {
-                    Loader.Load(mainMenuScene);
+                    SceneManager.LoadScene(mainMenuScene);
                 }
             }
             if (score >= 100)
@@ -47,7 +47,7 @@ namespace ShootEmUp
                 }
                 if (restartTimer <= 0)
                 {
-                    Loader.Load(mainMenuScene);
+                    SceneManager.LoadScene(mainMenuScene);
                 }
             }
         }
